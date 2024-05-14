@@ -356,7 +356,7 @@ MonoBehaviour:
   forceMultiplier: 5
   sensitivity: 0.06
   lengthThreshold: 200
-  speedThreshold: 500
+  speedThreshold: 0
 --- !u!114 &1037020441
 MonoBehaviour:
   m_ObjectHideFlags: 0
