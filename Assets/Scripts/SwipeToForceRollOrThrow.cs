@@ -13,9 +13,10 @@ public class SwipeToForceRollOrThrow : MonoBehaviour
 
     void Start()
     {
+        Debug.LogError("SwipeToForceRollOrThrow Started");
         if (mainCamera != null)
         {
-            mainCamera.transform.position = new Vector3(0, 2.5f, -11.5f);
+            mainCamera.transform.position = new Vector3(0, 1.6f, -2.5f);
             mainCamera.transform.rotation = Quaternion.LookRotation(Vector3.forward);
             mainCamera.transform.rotation = Quaternion.Euler(15f, 0, 0);// Ensure it looks towards the positive x-axis
         }

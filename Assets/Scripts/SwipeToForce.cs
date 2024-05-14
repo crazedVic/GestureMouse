@@ -13,6 +13,7 @@ public class SwipeToForce : MonoBehaviour
 
     void Start()
     {
+        Debug.LogError("SwipeToForce Started");
         if (mainCamera != null)
         {
             mainCamera.transform.position = new Vector3(0, 1.6f, -2.5f);

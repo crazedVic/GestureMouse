@@ -314,6 +314,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1037020439}
   - component: {fileID: 1037020440}
+  - component: {fileID: 1037020443}
+  - component: {fileID: 1037020442}
+  - component: {fileID: 1037020441}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -352,6 +355,53 @@ MonoBehaviour:
   mainCamera: {fileID: 963194227}
   forceMultiplier: 5
   sensitivity: 0.06
+--- !u!114 &1037020441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1037020437}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01a6f136acd254841a5fc5646cb362c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigidbodyComponent: {fileID: 1740260672}
+  mainCamera: {fileID: 963194227}
+  forceMultiplier: 10
+  sensitivity: 1
+--- !u!114 &1037020442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1037020437}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0befdd9cc68d9d5489e55ba9d4769a91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigidbodyComponent: {fileID: 1740260672}
+  mainCamera: {fileID: 963194227}
+  forceMultiplier: 10
+  sensitivity: 1
+--- !u!114 &1037020443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1037020437}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7322ba706b8319a489d7ce59f8d49fea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigidbodyComponent: {fileID: 1740260672}
+  mainCamera: {fileID: 963194227}
+  forceMagnitude: 100
 --- !u!1 &1671128225
 GameObject:
   m_ObjectHideFlags: 0

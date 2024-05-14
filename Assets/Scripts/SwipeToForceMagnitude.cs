@@ -11,14 +11,16 @@ public class SwipeToForceMagnitude : MonoBehaviour
     private float startTime;
     private bool swipeInProgress = false;
 
-    void Awake()
+    void Start()
     {
+        Debug.LogError("SwipeToForceMagnitude Started");
         // Set camera and rigidbody for top-down view
         if (mainCamera != null)
         {
-            mainCamera.orthographic = true;
-            mainCamera.transform.position = new Vector3(0, 10, 0);
-            mainCamera.transform.rotation = Quaternion.Euler(90, 0, 0);
+            mainCamera.transform.position = new Vector3(0, 1.6f, -2.5f);
+            mainCamera.transform.rotation = Quaternion.LookRotation(Vector3.forward);
+            mainCamera.transform.rotation = Quaternion.Euler(15f, 0, 0);// Ensure it looks towards the positive x-axis
+
         }
         else
         {

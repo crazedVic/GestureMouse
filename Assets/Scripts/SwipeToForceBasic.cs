@@ -9,14 +9,16 @@ public class SwipeToForceBasic : MonoBehaviour
     private Vector2 startPosition;
     private bool swipeInProgress = false;
 
-    void Awake()
+    void Start()
     {
+        Debug.LogError("SwipeToForceBasic Started");
         // Position and orient the camera for a top-down orthographic view
         if (mainCamera != null)
         {
-            mainCamera.orthographic = true;
-            mainCamera.transform.position = new Vector3(0, 10, 0);
-            mainCamera.transform.rotation = Quaternion.Euler(90, 0, 0);
+            mainCamera.transform.position = new Vector3(0, 1.6f, -2.5f);
+            mainCamera.transform.rotation = Quaternion.LookRotation(Vector3.forward);
+            mainCamera.transform.rotation = Quaternion.Euler(15f, 0, 0);// Ensure it looks towards the positive x-axis
+
         }
         else
         {
@@ -57,12 +59,17 @@ public class SwipeToForceBasic : MonoBehaviour
     void ProcessSwipe(Vector2 swipeVector)
     {
         // Compute the swipe vector in world space
-        Vector3 worldSwipeStart = mainCamera.ScreenToWorldPoint(new Vector3(startPosition.x, startPosition.y, mainCamera.nearClipPlane));
-        Vector3 worldSwipeEnd = mainCamera.ScreenToWorldPoint(new Vector3(startPosition.x + swipeVector.x, startPosition.y + swipeVector.y, mainCamera.nearClipPlane));
+        Vector3 worldSwipeStart = mainCamera.ScreenToWorldPoint(
+            new Vector3(startPosition.x, startPosition.y, mainCamera.nearClipPlane));
+
+        Vector3 worldSwipeEnd = mainCamera.ScreenToWorldPoint(
+            new Vector3(startPosition.x + swipeVector.x,
+            startPosition.y + swipeVector.y, mainCamera.nearClipPlane));
 
         Vector3 swipeDirection = new Vector3(worldSwipeEnd.x - worldSwipeStart.x, 0, worldSwipeEnd.z - worldSwipeStart.z);
 
-        // Normalize the direction if needed, ensuring we do not normalize a very small magnitude vector
+        // Normalize the direction if needed,
+        // ensuring we do not normalize a very small magnitude vector
         if (swipeDirection.magnitude > 0.01f)
         {
             swipeDirection.Normalize();
