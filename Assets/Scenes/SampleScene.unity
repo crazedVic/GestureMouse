@@ -355,6 +355,8 @@ MonoBehaviour:
   mainCamera: {fileID: 963194227}
   forceMultiplier: 5
   sensitivity: 0.06
+  lengthThreshold: 200
+  speedThreshold: 500
 --- !u!114 &1037020441
 MonoBehaviour:
   m_ObjectHideFlags: 0

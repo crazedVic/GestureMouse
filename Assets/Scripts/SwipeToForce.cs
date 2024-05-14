@@ -11,6 +11,9 @@ public class SwipeToForce : MonoBehaviour
     private float startTime;
     private bool swipeInProgress = false;
 
+    [SerializeField] float lengthThreshold = 200.0f; 
+    [SerializeField] float speedThreshold = 1400.0f;
+
     void Start()
     {
         Debug.LogError("SwipeToForce Started");
@@ -77,8 +80,8 @@ public class SwipeToForce : MonoBehaviour
         float swipeSpeed = swipeLength / duration; // Speed of the swipe
 
         // Define thresholds for a throw
-        float lengthThreshold = 200.0f; // Adjust this value based on your game's scale
-        float speedThreshold = 1400.0f; // Adjust this value based on expected swipe speeds
+        //float lengthThreshold = 200.0f; // Adjust this value based on your game's scale
+        //float speedThreshold = 1400.0f; // Adjust this value based on expected swipe speeds
         Debug.Log($"Swipe Length: {swipeLength}");
         Debug.Log($"Swipe Speed: {swipeSpeed}");
         // Check if the swipe meets the criteria for a throw
